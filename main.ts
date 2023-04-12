@@ -31,8 +31,6 @@ basic.forever(function () {
     if (teller <= 4 && dht11_dht22.readDataSuccessful()) {
         luchtvochtigheid = tijdelijk
         basic.pause(3000)
-    } else if (teller > 4 && !(dht11_dht22.readDataSuccessful())) {
-        control.reset()
     } else {
         teller += 1
     }
