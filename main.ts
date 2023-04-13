@@ -29,7 +29,7 @@ basic.forever(function () {
         basic.pause(3000)
     }
     tijdelijk = dht11_dht22.readData(dataType.humidity)
-    if (teller <= 3) {
+    if (teller <= 3 && dht11_dht22.readDataSuccessful()) {
         luchtvochtigheid = tijdelijk
         basic.pause(3000)
     } else {
