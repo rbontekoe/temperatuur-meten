@@ -16,7 +16,7 @@ basic.forever(function () {
     DigitalPin.P0,
     true,
     false,
-    true
+    false
     )
     tijdelijk = dht11_dht22.readData(dataType.temperature)
     if (teller <= 3 && dht11_dht22.readDataSuccessful()) {
