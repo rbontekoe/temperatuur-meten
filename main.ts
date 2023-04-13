@@ -19,16 +19,16 @@ basic.forever(function () {
     true
     )
     tijdelijk = dht11_dht22.readData(dataType.temperature)
-    if (teller <= 4 && dht11_dht22.readDataSuccessful()) {
+    if (teller <= 3 && dht11_dht22.readDataSuccessful()) {
         temperatuur = tijdelijk
         basic.pause(3000)
-    } else if (teller > 4 && !(dht11_dht22.readDataSuccessful())) {
+    } else if (teller > 3 && !(dht11_dht22.readDataSuccessful())) {
         control.reset()
     } else {
         teller += 1
     }
     tijdelijk = dht11_dht22.readData(dataType.humidity)
-    if (teller <= 4 && dht11_dht22.readDataSuccessful()) {
+    if (teller <= 3 && dht11_dht22.readDataSuccessful()) {
         luchtvochtigheid = tijdelijk
         basic.pause(3000)
     } else {
